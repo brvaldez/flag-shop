@@ -150,22 +150,29 @@ p {
   padding: 20px;
 }
 
+.flag-card {
+  background-color: aliceblue;
 .card {
   background-color: rgb(115, 204, 42);
   margin: 5px;
   padding: 10px;
   border-radius: 10px;
   box-shadow:
-    0 4px 8px rgba(244, 244, 248, 0.1),
-    0 6px 20px rgba(233, 233, 243, 0.1);
+    0 4px 8px rgba(0, 0, 0, 0.1),
+    0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s cubic-bezier(0.4,0,0.2,1), box-shadow 0.2s cubic-bezier(0.4,0,0.2,1);
 }
-.card img {
-  /* Essential image styles */
-  width: 290px; /* Image takes the full width of the card container */
-  height: 300px; /* Example fixed height for uniform cards */
-  object-fit: cover; /* Crops the image to cover the area while maintaining aspect ratio */
 
-  /* Optional: Round the top corners of the image to match the card */
+.flag-card:hover {
+  transform: translateY(-10px) scale(1.04);
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.18),
+    0 12px 32px rgba(0, 0, 0, 0.18);
+}
+.flag-card img {
+  width: 290px;
+  height: 300px;
+  object-fit: cover;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
