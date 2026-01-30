@@ -51,7 +51,7 @@ p {
   align-items: center;
   justify-content: space-around;
   flex-wrap: nowrap;
-  background: rgb(115, 204, 42); /* Optional background */
+  background: rgb(255, 255, 255); /* Optional background */
   border-radius: 5px;
   margin: 10px auto;
   box-shadow: 5px 5px 10px 3px rgba(70, 92, 192, 0.2); /* h v blur spread color */
@@ -156,8 +156,8 @@ p {
   padding: 10px;
   border-radius: 10px;
   box-shadow:
-    0 4px 8px rgba(18, 12, 209, 0.1),
-    0 6px 20px rgba(17, 17, 201, 0.1);
+    0 4px 8px rgba(244, 244, 248, 0.1),
+    0 6px 20px rgba(233, 233, 243, 0.1);
 }
 .card img {
   /* Essential image styles */
