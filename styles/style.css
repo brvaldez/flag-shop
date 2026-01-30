@@ -2,8 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
-  --special-color: #ff9900;
-  background-color: rgb(242, 246, 247);
+  --special-color: #d2ded3;
+  background-color: rgb(255, 255, 255);
 }
 
 body {
@@ -17,9 +17,10 @@ body {
   width: full;
   height: auto;
   padding: 20px;
+  /* border: 1px solid black; */
 }
 p {
-  line-height: 1.6;
+  line-height: 1.6; /* Sets line spacing to 1.6 times the font size */
 }
 .primary-font {
   font-family: "Noto Serif", serif;
@@ -37,23 +38,23 @@ p {
 }
 
 .logo {
-  width: 110px;
-  height: auto;
+  width: 110px; /* Set your desired width */
+  height: auto; /* Automatically adjusts to prevent distortion */
 }
 
 .navbar {
-  position: fixed;
-  top: 0;
-  z-index: 999;
+  position: fixed; /* helps keep the navbar stick to top*/
+  top: 0; /* helps keep the navbar stick to top*/
+  z-index: 999; /* Keeps navbar above other content */
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-wrap: nowrap;
-  background: rgb(236, 238, 247);
+  background: rgb(115, 204, 42); /* Optional background */
   border-radius: 5px;
   margin: 10px auto;
-  box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 10px 3px rgba(70, 92, 192, 0.2); /* h v blur spread color */
 }
 
 .hero {
@@ -66,32 +67,33 @@ p {
 }
 
 .bottom-text {
-  justify-content: flex-end;
+  justify-content: flex-end; /* Pushes content to the bottom */
 }
 
 .special-color {
-  color: #ff9900;
+  color: #129eda;
 }
 
 .horizontal-menu {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  display: flex; /* Aligns items in a row */
+  list-style: none; /* Removes bullet points */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
 }
 .vertical-menu {
-  display: flex;
+  display: flex; /* Aligns items in a col */
   flex-direction: column;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  list-style: none; /* Removes bullet points */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
 }
 .vertical-menu a {
+  /* Styles the links as blocks to fill the width */
   display: block;
-  padding: 5px 5px;
+  padding: 5px 5px; /* Adds padding inside each menu item */
   background-color: #f4f4f4;
   color: var(--special-color);
-  text-decoration: none;
+  text-decoration: none; /* Removes default underline */
   border-radius: 4px;
 }
 
@@ -99,17 +101,17 @@ p {
   background-color: #262424;
 }
 .horizontal-menu li {
-  padding: 10px 10px;
+  padding: 10px 10px; /* Adds spacing around menu items */
 }
 
 .vertical-menu li {
-  padding: 3px 3px;
+  padding: 3px 3px; /* Adds spacing around menu items */
   max-width: 200px;
 }
 
 .horizontal-menu a {
-  color: rgb(11, 13, 34);
-  text-decoration: none;
+  color: rgb(17, 33, 212);
+  text-decoration: none; /* Removes underlines */
   font-size: 1.1rem;
   font-weight: 600;
 }
@@ -122,7 +124,7 @@ p {
   margin: 10px auto;
   display: grid;
   max-width: 90%;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
   justify-items: flex-end;
   align-items: center;
   gap: 40px;
@@ -149,42 +151,51 @@ p {
 }
 
 .card {
-  background-color: aliceblue;
+  background-color: rgb(115, 204, 42);
   margin: 5px;
   padding: 10px;
   border-radius: 10px;
   box-shadow:
-    0 4px 8px rgba(0, 0, 0, 0.1),
-    0 6px 20px rgba(0, 0, 0, 0.1);
+    0 4px 8px rgba(18, 12, 209, 0.1),
+    0 6px 20px rgba(17, 17, 201, 0.1);
 }
 .card img {
-  width: 290px;
-  height: 300px;
-  object-fit: cover;
+  /* Essential image styles */
+  width: 290px; /* Image takes the full width of the card container */
+  height: 300px; /* Example fixed height for uniform cards */
+  object-fit: cover; /* Crops the image to cover the area while maintaining aspect ratio */
+
+  /* Optional: Round the top corners of the image to match the card */
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
 
 button {
-  display: inline-block;
-  padding: 10px 10px;
-  text-align: center;
-  text-decoration: none;
+  display: inline-block; /* Allows padding and margin, and keeps it inline */
+  padding: 10px 10px; /* Space between text and border (top/bottom, left/right) */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underlines from <a> tags */
+
+  /* Color and background */
   background-color: var(--special-color);
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
-  border-radius: 8px;
-  transition: background-color 0.3s;
+  color: rgb(216, 31, 31); /* White text color */
+
+  /* Font and appearance */
+  font-size: 16px; /* Increase font size */
+  cursor: pointer; /* Change mouse cursor to a hand on hover */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
 button:hover {
-  background-color: #008cba;
+  /* Hover effect: changes background color when the user hovers over the button */
+
+  background-color: #008cba; /* A different color on hover */
 }
 
 .news-letter-container {
-  position: relative;
+  position: relative; /* Essential for positioning the pseudo-element */
   width: 100%;
   height: 600px;
   color: white;
@@ -197,25 +208,29 @@ button:hover {
 
 .news-letter-container::before {
   content: "";
-  background-image: url("../assets/news-letter-bg.png");
+  background-image: url("assets/background_image.jpg"); /* Replace with your image URL */
   background-size: cover;
   position: absolute;
+  /* top: 0;
+    left: 0; */
   width: 100%;
   height: 100%;
-  opacity: 1;
-  z-index: -1;
+  opacity: 1; /* Set desired opacity here (0.0 to 1.0) */
+  z-index: -1; /* Places the image behind the container's content */
 }
 
 footer {
   width: 99%;
+  /* position: fixed; */
   bottom: 0;
   z-index: 999;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  background: rgb(236, 238, 247);
+  background: rgb(236, 238, 247); /* Optional background */
+  /* max-width: fit-content; */
   padding: 40px;
   gap: 20px;
-  box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2); /* h v blur spread color */
 }
 
 /* for smaller screen */
@@ -226,12 +241,12 @@ footer {
     padding: auto;
   }
   .horizontal-menu li {
-    padding: 5px 5px;
+    padding: 5px 5px; /* Adds spacing around menu items */
   }
 
   .banner {
     width: fit-content;
-    display: flex;
+    display: flex; /* Hide an element on small screens */
     flex-wrap: wrap;
     flex-direction: column-reverse;
     justify-items: baseline;
